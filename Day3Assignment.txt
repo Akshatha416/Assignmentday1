@@ -1,0 +1,79 @@
+Lambda Expression:
+
+Lambda Expression is just an anonymous function function.
+That means the function which doesn't have name, return type and access modifiers.
+Lambda Expression  is also known as anonymous functions or closures.
+syntax:     () -> {}
+
+ex: 
+
+public void add(int a,intb)
+{ 
+system.out.println( a+b); 
+}
+
+in lambda Expression can we written as:
+
+(a,b)->  system.out.println( a+b); 
+
+If the type of the parameter can be decided by  compiler automatically based on the context.
+
+
+Ex:
+  Iterating collections Using forEach loop
+
+public class test{
+
+public static void main(String[] args){
+
+List<String> list= new ArrayList<String>();
+list.add("AAA");
+list.add("BBB");
+list.add("CCC");
+list.add("DDD");
+
+list.forEach((names)-> system.out.println(names));
+
+} 
+ }
+
+
+2.   Streams
+
+The Stream API is used to process collections of objects.
+ 
+A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
+
+The features of the Java stream are –
+1.A stream is not a data structure instead it takes input from the Collections, Arrays, or I/O channels.
+
+2.Streams don’t change the original data structure, they only provide the result as per the pipelined methods.
+
+ex: 
+
+import java.util.*
+import java.util.Stream;
+public class Test{
+public static void main(String[] args){
+ArrayList<Integer> list=new ArrayList<Integer>();
+for(int i=0;i<30;i++)
+
+{
+list.add(i);
+}
+
+System.out.println("List is:"+list);
+
+List<Integer> l=list.stream().filter(i->i%2==0).collet(Collectors.toList());
+
+System.out.println("Stream output:"+l);
+
+}
+
+}
+
+
+
+
+
+
